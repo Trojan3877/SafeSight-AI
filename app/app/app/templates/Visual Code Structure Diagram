@@ -1,0 +1,21 @@
+SafeSight-AI
+│
+├── run.py                # Entry point
+├── requirements.txt
+├── README.md
+├── TECH_STACK.md
+│
+├── app/
+│   ├── __init__.py       # Initializes Flask app
+│   ├── routes.py         # Flask routing
+│   ├── model_utils.py    # TensorFlow model loading + detection
+│   ├── camera_stream.py  # OpenCV-based video or image input
+│   └── templates/
+│       └── index.html    # Web interface
+│
+├── static/
+│   └── style.css         # UI styling
+│
+├── saved_model/          # TensorFlow saved_model format
+│
+└── test_images/          # Sample test images
