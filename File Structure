@@ -1,0 +1,23 @@
+SafeSight-AI/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── model_utils.py
+│   ├── camera_stream.py
+│   └── templates/
+│       └── index.html
+│
+├── static/
+│   └── style.css
+│
+├── saved_model/
+│   └── [Your pretrained TensorFlow model]
+│
+├── test_images/
+│   └── sample1.jpg
+│
+├── README.md
+├── TECH_STACK.md
+├── requirements.txt
+└── run.py
