@@ -1,0 +1,9 @@
+[ Camera / Image Input ]
+        ↓
+[ Image Preprocessing (OpenCV) ]
+        ↓
+[ Object Detection Model (CNN / YOLO / SSD) ]
+        ↓
+[ Classification / Risk Scoring ]
+        ↓
+[ Output Dashboard / Alert System ]
