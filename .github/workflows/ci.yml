@@ -1,0 +1,5 @@
+Runs pytest tests/test_inference.py.
+
+Place under .github/workflows/ci.yml.
+
+docs/benchmark.md
