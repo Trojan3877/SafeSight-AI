@@ -1,0 +1,1 @@
+Video Feed → Frame Grabber → Object Detection Model (e.g., YOLOv5) → Risk Score → Alert Endpoint
