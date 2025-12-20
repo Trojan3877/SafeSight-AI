@@ -1,6 +1,6 @@
-torch
-transformers
-accelerate
 fastapi
-pydantic
-matplotlib
+uvicorn
+torch
+streamlit
+requests
+python-multipart
