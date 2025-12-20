@@ -1,33 +1,13 @@
-# Contributing to SafeSight-AI
+# 📓 Daily Engineering Log
 
-Thank you for your interest in contributing!
+## Day 1
+- Implemented modular detection pipeline
+- Added alert abstraction layer
 
-## Contribution Areas
-- Computer Vision model improvements
-- LLM reasoning enhancements
-- Automation workflows
-- Documentation & testing
+## Day 2
+- Integrated LLM-based risk explanation
+- Designed n8n automation flow
 
-## Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Follow PEP8 and project structure
-4. Add tests where applicable
-5. Submit a PR with a clear description
-
-## Code Standards
-- Typed Python (Pydantic preferred)
-- Modular design
-- No hardcoded secrets
-- Meaningful commit messages
-
-## Ethics & Responsibility
-SafeSight-AI is a safety-critical system.  
-Any contribution must:
-- Avoid biased assumptions
-- Preserve explainability
-- Maintain human override capability
-
----
-
-*By contributing, you agree to uphold ethical AI standards.*
+## Day 3
+- Metrics validation
+- Production hardening
