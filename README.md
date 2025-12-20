@@ -26,15 +26,7 @@ This repository showcases:
 ## 🧠 System Architecture
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0b77a225-40af-4b06-8401-e3b33f9f9918" />
 
-```mermaid
-flowchart LR
-    Client -->|REST| FastAPI
-    FastAPI --> Inference
-    Inference -->|CUDA| Model
-    Model --> Metrics
-    Metrics --> Dashboard
-    CI --> Docker
-    Docker --> Render
+
 
 
 🏗️ Tech Stack
