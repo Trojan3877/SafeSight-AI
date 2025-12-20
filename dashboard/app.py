@@ -1,13 +1,13 @@
 import streamlit as st
 import requests
 
-st.title("SafeSight AI – Live Inference")
+st.title("SafeSight AI – Live Dashboard")
 
-uploaded = st.file_uploader("Upload Image")
+uploaded = st.file_uploader("Upload data for inference")
 
 if uploaded:
-    response = requests.post(
+    res = requests.post(
         "http://localhost:8000/predict",
         files={"file": uploaded.getvalue()}
     )
-    st.json(response.json())
+    st.json(res.json())
