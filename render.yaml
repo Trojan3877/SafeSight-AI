@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: safesight-ai
+    env: docker
+    dockerfilePath: docker/Dockerfile.cpu
+    plan: standard
