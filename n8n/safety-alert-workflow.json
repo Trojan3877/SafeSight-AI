@@ -1,13 +1,8 @@
 {
-  "name": "SafeSight Alert Workflow",
+  "name": "SafeSight AI Alerts",
   "nodes": [
-    {
-      "name": "Webhook Trigger",
-      "type": "n8n-nodes-base.webhook"
-    },
-    {
-      "name": "Send Slack Alert",
-      "type": "n8n-nodes-base.slack"
-    }
+    { "type": "webhook" },
+    { "type": "slack" },
+    { "type": "email" }
   ]
 }
