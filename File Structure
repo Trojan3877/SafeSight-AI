@@ -1,23 +1,17 @@
 SafeSight-AI/
-│
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── model_utils.py
-│   ├── camera_stream.py
-│   └── templates/
-│       └── index.html
-│
-├── static/
-│   └── style.css
-│
-├── saved_model/
-│   └── [Your pretrained TensorFlow model]
-│
-├── test_images/
-│   └── sample1.jpg
-│
-├── README.md
-├── TECH_STACK.md
+├── src/
+│   ├── vision/
+│   ├── models/
+│   ├── llm/
+│   ├── api/
+│   └── utils/
+├── automation/
+│   └── n8n/
+├── metrics/
+├── logs/
+├── METRICS.md
+├── DAILY_LOG.md
+├── CONTRIBUTING.md
+├── Dockerfile
 ├── requirements.txt
-└── run.py
+└── README.md
