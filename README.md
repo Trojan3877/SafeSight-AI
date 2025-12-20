@@ -8,7 +8,6 @@
 [![CI](https://img.shields.io/badge/GitHub-Actions-black.svg)](https://github.com/features/actions)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
----
 
 ## 🚀 Overview
 
@@ -23,9 +22,6 @@ This repository showcases:
 - Infrastructure-ready Docker builds
 - Engineering documentation used in Big Tech environments
 
-> 🎯 Built to **L6–L7 engineering standards**, not academic demos.
-
----
 
 ## 🧠 System Architecture
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0b77a225-40af-4b06-8401-e3b33f9f9918" />
