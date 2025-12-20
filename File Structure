@@ -1,25 +1,20 @@
 SafeSight-AI/
-├── README.md
+├── api/
+│   ├── main.py              # FastAPI app
+│   ├── schemas.py           # Request/response models
+│   ├── inference.py         # Model loading + prediction
+│   └── __init__.py
+│
+├── dashboard/
+│   └── app.py               # Streamlit live dashboard
+│
+├── model/
+│   └── model.pt             # Trained model
+│
 ├── metrics.md
 ├── dailylog.md
 ├── CONTRIBUTING.md
 ├── requirements.txt
-├── render.yaml
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── docker/
-│   ├── Dockerfile.cpu
-│   └── Dockerfile.cuda
-├── n8n/
-│   └── safety-alert-workflow.json
-├── src/
-│   ├── main.py
-│   ├── detector.py
-│   ├── alert_engine.py
-│   ├── llm_llama3.py
-│   ├── config.py
-│   └── utils.py
-├── tests/
-│   └── test_detector.py
-└── .gitignore
+├── Dockerfile
+├── .github/workflows/ci.yml
+├── README.md
