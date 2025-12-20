@@ -1,0 +1,13 @@
+{
+  "name": "SafeSight Alert Workflow",
+  "nodes": [
+    {
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook"
+    },
+    {
+      "name": "Send Slack Alert",
+      "type": "n8n-nodes-base.slack"
+    }
+  ]
+}
