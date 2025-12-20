@@ -1,17 +1,20 @@
 SafeSight-AI/
-├── src/
-│   ├── vision/
-│   ├── models/
-│   ├── llm/
-│   ├── api/
-│   └── utils/
-├── automation/
-│   └── n8n/
-├── metrics/
-├── logs/
-├── METRICS.md
-├── DAILY_LOG.md
+├── README.md
+├── metrics.md
+├── dailylog.md
 ├── CONTRIBUTING.md
-├── Dockerfile
 ├── requirements.txt
-└── README.md
+├── docker/
+│   └── Dockerfile
+├── n8n/
+│   └── safety-alert-workflow.json
+├── src/
+│   ├── main.py
+│   ├── config.py
+│   ├── llm_guard.py
+│   ├── detector.py
+│   ├── alert_engine.py
+│   └── utils.py
+├── tests/
+│   └── test_detector.py
+└── .gitignore
