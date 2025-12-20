@@ -1,4 +1,6 @@
-fastapi
-pydantic
 torch
 transformers
+accelerate
+fastapi
+pydantic
+matplotlib
