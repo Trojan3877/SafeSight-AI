@@ -4,16 +4,21 @@ SafeSight-AI/
 ├── dailylog.md
 ├── CONTRIBUTING.md
 ├── requirements.txt
+├── render.yaml
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── docker/
-│   └── Dockerfile
+│   ├── Dockerfile.cpu
+│   └── Dockerfile.cuda
 ├── n8n/
 │   └── safety-alert-workflow.json
 ├── src/
 │   ├── main.py
-│   ├── config.py
-│   ├── llm_guard.py
 │   ├── detector.py
 │   ├── alert_engine.py
+│   ├── llm_llama3.py
+│   ├── config.py
 │   └── utils.py
 ├── tests/
 │   └── test_detector.py
