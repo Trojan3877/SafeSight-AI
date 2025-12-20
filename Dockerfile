@@ -1,8 +1,13 @@
-FROM python:3.10-slim
+FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04
 
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY . .
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-COPY src/ src/
-CMD ["python", "src/main.py"]
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
+
+pip install -r requirements.txt
+uvicorn api.main:app --reload
+streamlit run dashboard/app.py
