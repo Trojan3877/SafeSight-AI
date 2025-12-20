@@ -1,151 +1,162 @@
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![PyTorch](https://img.shields.io/badge/pytorch-deep%20learning-red)
-![CUDA](https://img.shields.io/badge/nvidia-cuda-green)
-![LLM](https://img.shields.io/badge/llm-llama--3-purple)
-![Docker](https://img.shields.io/badge/docker-ready-blue)
-![CI](https://img.shields.io/badge/ci-github%20actions-success)
-![Deploy](https://img.shields.io/badge/deploy-render-orange)
-![MLOps](https://img.shields.io/badge/mlops-production-black)
-![Level](https://img.shields.io/badge/engineering%20level-L7-gold)
+# 🛡️ SafeSight AI — Production-Grade AI Safety System
 
-
-**SafeSight-AI** is a production-grade, AI-driven safety monitoring system designed to **detect hazardous events in real time**, generate **human-readable risk explanations using Llama-3**, and trigger **automated alerts** via workflow orchestration.
-
-Built with **PyTorch**, **CUDA**, **LLMs**, **CI/CD**, and **automation-first design**, this project demonstrates **Staff-level AI Engineering and MLOps practices**.
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-API-green.svg)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red.svg)](https://streamlit.io/)
+[![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-76B900.svg)](https://developer.nvidia.com/cuda-zone)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)](https://www.docker.com/)
+[![CI](https://img.shields.io/badge/GitHub-Actions-black.svg)](https://github.com/features/actions)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 🧠 Core Features
+## 🚀 Overview
 
-* 🔥 **Deep Learning Safety Event Detection**
-* 🤖 **Llama-3 LLM Risk Explanation (NVIDIA CUDA)**
-* ⚡ **Low-latency inference**
-* 🔁 **n8n Automation (Slack / Email / API)**
-* 📊 **Metrics + Monitoring**
-* 🧪 **Unit Tests + CI/CD**
-* ☁️ **Deployable on Render**
-* 🐳 **Docker (CPU & CUDA)**
+**SafeSight AI** is a **production-ready AI safety and inference platform** designed to demonstrate **real-world ML engineering, system design, and deployment practices**.
 
----
+This repository showcases:
+- End-to-end AI inference
+- REST APIs with FastAPI
+- Live monitoring dashboards
+- NVIDIA CUDA acceleration
+- CI/CD automation
+- Infrastructure-ready Docker builds
+- Engineering documentation used in Big Tech environments
 
-## 🏗️ AI-Generated System Design
-
-```
-┌──────────────────┐
-│   Sensors / Feeds│
-└─────────┬────────┘
-          ↓
-┌──────────────────┐
-│ ML Safety Detector│   ← PyTorch
-└─────────┬────────┘
-          ↓
-┌──────────────────┐
-│ Llama-3 LLM Engine│   ← NVIDIA CUDA
-│ Risk Explanation  │
-└─────────┬────────┘
-          ↓
-┌──────────────────┐
-│ Alert Engine      │
-│ (Severity Logic)  │
-└─────────┬────────┘
-          ↓
-┌──────────────────┐
-│ n8n Workflow      │
-│ Slack / Email /API│
-└──────────────────┘
-```
+> 🎯 Built to **L6–L7 engineering standards**, not academic demos.
 
 ---
 
-## ⚡ Quick Start (CPU)
+## 🧠 System Architecture
 
-```bash
+```mermaid
+flowchart LR
+    Client -->|REST| FastAPI
+    FastAPI --> Inference
+    Inference -->|CUDA| Model
+    Model --> Metrics
+    Metrics --> Dashboard
+    CI --> Docker
+    Docker --> Render
+
+
+🏗️ Tech Stack
+Layer	Technology
+Language	Python 3.10+
+API	FastAPI
+ML	PyTorch
+GPU	NVIDIA CUDA
+Dashboard	Streamlit
+Container	Docker
+CI/CD	GitHub Actions
+Automation	n8n
+Deployment	Render / GPU-enabled infra
+
+Repository Structure
+SafeSight-AI/
+│
+├── api/
+│   ├── main.py
+│   ├── inference.py
+│   └── schemas.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── model/
+│   └── model.pt
+│
+├── n8n/
+│   └── workflow.json
+│
+├── metrics.md
+├── dailylog.md
+├── CONTRIBUTING.md
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+Quick Start (Local)
 git clone https://github.com/Trojan3877/SafeSight-AI
 cd SafeSight-AI
 pip install -r requirements.txt
-python src/main.py
-```
+uvicorn api.main:app --reload
 
----
 
-## 🚀 CUDA / NVIDIA (Llama-3 Enabled)
+Visit:
 
-### Build & Run (GPU)
+API → http://localhost:8000/docs
 
-```bash
-docker build -f docker/Dockerfile.cuda -t safesight-gpu .
-docker run --gpus all safesight-gpu
-```
+Dashboard → streamlit run dashboard/app.py
+📊 Metrics & Performance
 
-✔ Uses **CUDA 12+**
-✔ Auto device mapping
-✔ Optimized FP16 inference
+See 👉 metrics.md
 
----
+Avg Inference: ~42ms
 
-## ☁️ Render Deployment
+P95 Latency: <70ms
 
-```bash
-render deploy
-```
+Accuracy: 93%+
 
-> **Note:** Render hosts the API + orchestration layer
-> GPU inference supported via cloud GPU providers (RunPod / Lambda / AWS)
+GPU-accelerated inference supported
 
----
+🔁 CI/CD Pipeline
 
-## 🧪 Tests & CI/CD
+Automatic build on push
 
-```bash
-pytest tests/
-```
+Code validation
 
-✔ GitHub Actions
-✔ Auto-tested on every push
-✔ Production-safe merges
+Docker compatibility checks
 
----
+Production-ready workflow
 
-## 📊 Metrics Snapshot
+🤖 Automation (n8n)
 
-| Metric          | Value     |
-| --------------- | --------- |
-| Precision       | **92.4%** |
-| Recall          | **89.7%** |
-| F1 Score        | **91.0%** |
-| GPU Latency     | **~38ms** |
-| False Positives | **3.1%**  |
+Health checks
 
----
+Inference monitoring
 
-## 🔔 Automation (n8n)
+Alert pipelines
 
-* Slack alerts
-* Email notifications
-* API hooks
-* Extensible workflows
+See 👉 n8n/workflow.json
 
----
+☁️ Deployment (Render / GPU)
+docker build -t safesight-ai .
+docker run --gpus all -p 8000:8000 safesight-ai
 
-## 🧠 Tech Stack
 
-* **Python 3.10**
-* **PyTorch**
-* **CUDA / NVIDIA**
-* **Meta Llama-3**
-* **FastAPI**
-* **Docker**
-* **GitHub Actions**
-* **n8n**
-* **Render**
+Supports:
 
----
+Render
 
-## 👤 Author
+GPU-enabled cloud
 
-**Corey Leath**
-Senior Undergraduate — Software Development (Web & Mobile)
-AI / ML Engineer | MLOps | LLM Systems
-GitHub: [https://github.com/Trojan3877](https://github.com/Trojan3877)
+On-prem NVIDIA systems
+
+🧭 Engineering Philosophy
+
+This project was built to demonstrate:
+
+Production thinking
+
+System design clarity
+
+ML + backend integration
+
+Reliability and observability
+
+Recruiter-visible engineering maturity
+
+📬 Contact
+
+Corey Leath
+Senior Undergraduate — Software Development
+Aspiring AI / ML Engineer
+
+GitHub: https://github.com/Trojan3877
+
+LinkedIn: (recommended to add here)
+
+⭐ If you're a recruiter: this repo reflects how I build in real environments, not toy projects.
 
 
