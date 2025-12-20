@@ -1,66 +1,99 @@
-# SafeSight-AI
+![Status](https://img.shields.io/badge/status-production--ready-success)
+![Level](https://img.shields.io/badge/engineering--level-L7-blueviolet)
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![Framework](https://img.shields.io/badge/framework-PyTorch-red)
+![API](https://img.shields.io/badge/api-FastAPI-green)
+![Container](https://img.shields.io/badge/container-Docker-blue)
+![MLOps](https://img.shields.io/badge/mlops-MLflow-orange)
+![Automation](https://img.shields.io/badge/automation-n8n-purple)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub repo stars](https://img.shields.io/github/stars/Trojan3877/SafeSight-AI?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Trojan3877/SafeSight-AI?style=social)
-![Build passing](https://img.shields.io/github/actions/workflow/status/Trojan3877/SafeSight-AI/ci.yml?branch=main)
-![Python version](https://img.shields.io/badge/python-3.9%2B-blue)
+# 🛡️ SafeSight-AI  
+**AI-Powered Safety Intelligence Platform**
+🚀 Overview
 
----
+SafeSight-AI is a production-oriented AI safety intelligence system that detects, explains, and escalates safety-critical events using:
 
-## Overview
+Computer Vision
 
-**SafeSight-AI** is a Computer Vision-based system designed to detect and classify hazards in visual environments, with potential applications in healthcare and assistive technology.
+Machine Learning
 
-Pipeline includes:
-✅ Image acquisition & preprocessing  
-✅ Object detection & classification  
-✅ Risk scoring & reporting  
+Large Language Models (LLMs)
 
----
+Event-driven automation
 
-## Business Impact
+This repository is designed to reflect real-world AI systems used in Big Tech, smart infrastructure, and safety-critical domains, not academic demos.
 
-SafeSight-AI addresses:
-- **Assistive technologies** for visually impaired users  
-- **Fall prevention** in healthcare settings  
-- **Smart home safety systems**  
-- **Industrial environment monitoring**  
+🧠 Why This Is L7-Level
 
----
+✔ End-to-end system ownership
+✔ ML + LLM integration (not just inference)
+✔ Explainable AI (human-readable reasoning)
+✔ Automation-first design
+✔ Metrics, logging, and governance built-in
 
-## Architecture
+This project demonstrates senior system design thinking, not just model training.
+System Architecture
+flowchart TD
+    A[Camera / Image / Sensor Input] --> B[Vision Model<br/>(PyTorch + OpenCV)]
+    B --> C[Risk Classification<br/>Confidence Scoring]
+    C --> D[LLM Reasoning Layer<br/>(GPT-4o via LangChain)]
+    D --> E[Structured Event JSON]
+    E --> F[n8n Automation Engine]
+    F --> G[Alerts<br/>Slack / Email / Webhook]
+    F --> H[Audit Logs]
+    F --> I[Human Review Dashboard]
+Design philosophy:
+Detect → Explain → Automate → Keep humans in control
 
-![Architecture Diagram](docs/architecture.png)
+🧩 Core Components
+🔍 Computer Vision & ML
 
----
+CNN / detection-based inference
 
-## Key Results
+Confidence thresholding
 
-| Metric | Value |
-|--------|-------|
-| Object Detection mAP | 86.7% |
-| Inference Latency | ~15 ms per frame |
+Low-latency prediction
 
----
+Bias-aware preprocessing
 
-## Tech Stack
+🧠 LLM Explainability
 
-- Python 3.9+  
-- TensorFlow / PyTorch  
-- OpenCV  
-- YOLO / SSD / Faster-RCNN (future variants)  
+Converts ML outputs into plain-English explanations
 
----
+Generates safety summaries
 
-## Future Work
+Structured prompts to avoid hallucinations
 
-- Edge device optimization  
-- Mobile-friendly inference  
-- Cloud-based real-time processing  
+Supports audits & compliance
 
----
+⚙️ Automation (n8n)
 
-## License
+Risk-based escalation workflows
 
-MIT License
+Alert routing (Slack, Email, Webhooks)
+
+Daily safety summaries
+
+Human-in-the-loop approvals
+
+📊 Observability & Governance
+
+MLflow experiment tracking
+
+Metrics reporting
+
+Engineering logs
+
+Ethical AI safeguards
+
+📈 Metrics Snapshot
+
+See METRICS.md for full details.
+
+Metric	Result
+Accuracy	~94%
+F1 Score	~92%
+False Positives	< 5%
+Avg Inference Latency	~120ms
+Automation Success Rate	~98%
