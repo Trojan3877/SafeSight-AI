@@ -2,16 +2,17 @@ from fastapi import FastAPI, UploadFile, File
 from api.inference import predict
 
 app = FastAPI(
-    title="SafeSight AI API",
-    description="Production-grade AI safety inference service",
+    title="SafeSight AI",
+    description="Production AI Safety Inference API",
     version="1.0.0"
 )
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "healthy"}
 
 @app.post("/predict")
-async def run_prediction(file: UploadFile = File(...)):
+async def predict_route(file: UploadFile = File(...)):
     result = predict(await file.read())
     return result
+
