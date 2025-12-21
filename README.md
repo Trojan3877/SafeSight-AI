@@ -8,6 +8,7 @@
 [![CI](https://img.shields.io/badge/GitHub-Actions-black.svg)](https://github.com/features/actions)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+[![SafeSight-AI Repo](https://github-readme-stats.vercel.app/api/pin/?username=Trojan3877&repo=SafeSight-AI&theme=radical)](https://github.com/Trojan3877/SafeSight-AI)
 
 ## 🚀 Overview
 
