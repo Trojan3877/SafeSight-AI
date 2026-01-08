@@ -1,20 +1,49 @@
 SafeSight-AI/
-├── api/
-│   ├── main.py              # FastAPI app
-│   ├── schemas.py           # Request/response models
-│   ├── inference.py         # Model loading + prediction
-│   └── __init__.py
+├── app/
+│   ├── api/                    # Flask REST API
+│   │   ├── routes.py
+│   │   ├── schemas.py          # Request/response validation
+│   │   └── health.py
+│   ├── core/
+│   │   ├── inference.py        # Model inference logic
+│   │   ├── preprocessing.py
+│   │   ├── postprocessing.py
+│   │   └── risk_engine.py      # Decision logic (L7 signal)
+│   ├── models/
+│   │   ├── loader.py
+│   │   └── registry.py
+│   ├── config/
+│   │   └── settings.py
+│   └── main.py                 # Flask entrypoint
 │
-├── dashboard/
-│   └── app.py               # Streamlit live dashboard
+├── streamlit_app/
+│   ├── app.py                  # Streamlit UI
+│   ├── components.py
+│   └── visualizations.py
 │
-├── model/
-│   └── model.pt             # Trained model
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
 │
-├── metrics.md
-├── dailylog.md
-├── CONTRIBUTING.md
-├── requirements.txt
-├── Dockerfile
-├── .github/workflows/ci.yml
+├── docker/
+│   ├── Dockerfile.api
+│   ├── Dockerfile.ui
+│   └── docker-compose.yml
+│
+├── monitoring/
+│   ├── logging.py
+│   └── metrics.py
+│
+├── .github/workflows/
+│   ├── ci.yml
+│   └── cd.yml
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── DECISIONS.md            # ADRs (huge L7 signal)
+│   └── API_SPEC.md
+│
 ├── README.md
+├── requirements.txt
+└── Makefile
