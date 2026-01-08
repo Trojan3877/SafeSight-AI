@@ -10,143 +10,47 @@
 
 [![SafeSight-AI Repo](https://github-readme-stats.vercel.app/api/pin/?username=Trojan3877&repo=SafeSight-AI&theme=radical)](https://github.com/Trojan3877/SafeSight-AI)
 
-## 🚀 Overview
+ SafeSight-AI 🚨
+**Production-Grade Computer Vision Risk Detection System**
 
-**SafeSight AI** is a **production-ready AI safety and inference platform** designed to demonstrate **real-world ML engineering, system design, and deployment practices**.
-
-This repository showcases:
-- End-to-end AI inference
-- REST APIs with FastAPI
-- Live monitoring dashboards
-- NVIDIA CUDA acceleration
-- CI/CD automation
-- Infrastructure-ready Docker builds
-- Engineering documentation used in Big Tech environments
-
-
-## 🧠 System Architecture
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0b77a225-40af-4b06-8401-e3b33f9f9918" />
+SafeSight-AI is an end-to-end AI system designed to detect safety risks using computer vision.  
+Built with **TensorFlow**, **Flask**, **Docker**, and **Streamlit**, it demonstrates enterprise-grade AI engineering practices.
 
 
 
-
-🏗️ Tech Stack
-Layer	Technology
-Language	Python 3.10+
-API	FastAPI
-ML	PyTorch
-GPU	NVIDIA CUDA
-Dashboard	Streamlit
-Container	Docker
-CI/CD	GitHub Actions
-Automation	n8n
-Deployment	Render / GPU-enabled infra
-
-Repository Structure
-SafeSight-AI/
-│
-├── api/
-│   ├── main.py
-│   ├── inference.py
-│   └── schemas.py
-│
-├── dashboard/
-│   └── app.py
-│
-├── model/
-│   └── model.pt
-│
-├── n8n/
-│   └── workflow.json
-│
-├── metrics.md
-├── dailylog.md
-├── CONTRIBUTING.md
-├── Dockerfile
-├── requirements.txt
-└── README.md
-
-Quick Start (Local)
-git clone https://github.com/Trojan3877/SafeSight-AI
-cd SafeSight-AI
-pip install -r requirements.txt
-uvicorn api.main:app --reload
+ System Architecture
+Streamlit UI → Flask API → TensorFlow Inference → Risk Engine
 
 
-Visit:
 
-API → http://localhost:8000/docs
-
-Dashboard → streamlit run dashboard/app.py
-📊 Metrics & Performance
-
-See 👉 metrics.md
-
-Avg Inference: ~42ms
-
-P95 Latency: <70ms
-
-Accuracy: 93%+
-
-GPU-accelerated inference supported
-
-🔁 CI/CD Pipeline
-
-Automatic build on push
-
-Code validation
-
-Docker compatibility checks
-
-Production-ready workflow
-
-🤖 Automation (n8n)
-
-Health checks
-
-Inference monitoring
-
-Alert pipelines
-
-See 👉 n8n/workflow.json
-
-☁️ Deployment (Render / GPU)
-docker build -t safesight-ai .
-docker run --gpus all -p 8000:8000 safesight-ai
+Core Features
+- TensorFlow CV inference
+- RESTful Flask API
+- Human-in-the-loop Streamlit dashboard
+- Dockerized microservices
+- CI-validated testing pipeline
 
 
-Supports:
+ Run Locally
+```bash
+docker compose -f docker/docker-compose.yml up --build
 
-Render
+UI: http://localhost:8501
+API: http://localhost:8000
+Testing
 
-GPU-enabled cloud
-
-On-prem NVIDIA systems
-
-🧭 Engineering Philosophy
-
-This project was built to demonstrate:
-
-Production thinking
-
-System design clarity
-
-ML + backend integration
-
-Reliability and observability
-
-Recruiter-visible engineering maturity
-
-📬 Contact
-
+Bash
+pytest tests/
+Engineering Highlights
+Separation of concerns (UI / API / ML)
+Risk scoring abstraction
+CI-validated builds
+Production-ready Docker setup
+ Future Roadmap
+Real-time video ingestion
+Model versioning & A/B testing
+Edge deployment (Jetson / iOS)
+Observability metrics
+👨‍💻 Author
 Corey Leath
-Senior Undergraduate — Software Development
-Aspiring AI / ML Engineer
-
-GitHub: https://github.com/Trojan3877
-
-LinkedIn: (recommended to add here)
-
-⭐ If you're a recruiter: this repo reflects how I build in real environments, not toy projects.
-
-
+AI / ML Engineer | Computer Vision | MLOps
