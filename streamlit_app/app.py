@@ -1,7 +1,10 @@
 # streamlit_app/app.py
-st.title("SafeSight AI – Real-Time Safety Monitor")
+import streamlit as st
+import requests
 
-uploaded = st.file_uploader("Upload frame")
-if uploaded:
-    response = requests.post(API_URL, files={"image": uploaded})
-    st.metric("Risk Score", response.json()["risk_score"])
+st.title("SafeSight-AI | Real-Time Risk Detection")
+
+file = st.file_uploader("Upload Image")
+if file:
+    res = requests.post("http://api:8000/predict", files={"image": file})
+    st.metric("Risk Level", res.json()["risk_level"])
