@@ -1,49 +1,36 @@
 SafeSight-AI/
 ├── app/
-│   ├── api/                    # Flask REST API
+│   ├── api/
 │   │   ├── routes.py
-│   │   ├── schemas.py          # Request/response validation
-│   │   └── health.py
+│   │   ├── health.py
+│   │   └── schemas.py
 │   ├── core/
-│   │   ├── inference.py        # Model inference logic
 │   │   ├── preprocessing.py
+│   │   ├── inference.py
 │   │   ├── postprocessing.py
-│   │   └── risk_engine.py      # Decision logic (L7 signal)
+│   │   └── risk_engine.py
 │   ├── models/
-│   │   ├── loader.py
-│   │   └── registry.py
+│   │   └── loader.py
 │   ├── config/
 │   │   └── settings.py
-│   └── main.py                 # Flask entrypoint
+│   └── main.py
 │
 ├── streamlit_app/
-│   ├── app.py                  # Streamlit UI
-│   ├── components.py
-│   └── visualizations.py
+│   └── app.py
 │
 ├── tests/
 │   ├── unit/
-│   ├── integration/
-│   └── e2e/
+│   │   └── test_risk_engine.py
+│   └── integration/
+│       └── test_api.py
 │
 ├── docker/
 │   ├── Dockerfile.api
 │   ├── Dockerfile.ui
 │   └── docker-compose.yml
 │
-├── monitoring/
-│   ├── logging.py
-│   └── metrics.py
-│
 ├── .github/workflows/
-│   ├── ci.yml
-│   └── cd.yml
+│   └── ci.yml
 │
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── DECISIONS.md            # ADRs (huge L7 signal)
-│   └── API_SPEC.md
-│
-├── README.md
 ├── requirements.txt
-└── Makefile
+└── README.md
