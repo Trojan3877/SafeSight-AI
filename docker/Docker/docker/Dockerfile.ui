@@ -1,0 +1,6 @@
+# docker/Dockerfile.ui
+FROM python:3.9
+WORKDIR /ui
+RUN pip install streamlit requests
+COPY streamlit_app .
+CMD ["streamlit", "run", "app.py"]
