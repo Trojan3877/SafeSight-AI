@@ -1,10 +1,18 @@
+# docker/docker-compose.yml
 version: "3.9"
 services:
   api:
-    build: docker/Dockerfile.api
-    ports: ["8000:8000"]
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
 
   ui:
-    build: docker/Dockerfile.ui
-    ports: ["8501:8501"]
-    depends_on: [api]
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
