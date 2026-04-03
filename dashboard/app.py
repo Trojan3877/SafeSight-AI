@@ -4,7 +4,11 @@ import requests
 import streamlit as st
 
 API_URL = os.environ.get("API_URL", "http://localhost:8000")
-REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT_SECONDS", 30))
+_DEFAULT_TIMEOUT = 30
+try:
+    REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT_SECONDS", _DEFAULT_TIMEOUT))
+except ValueError:
+    REQUEST_TIMEOUT = _DEFAULT_TIMEOUT
 
 st.title("SafeSight AI – Live Dashboard")
 

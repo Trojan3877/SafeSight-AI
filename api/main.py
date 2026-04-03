@@ -8,7 +8,15 @@ from api.inference import predict
 logger = logging.getLogger(__name__)
 
 # Maximum accepted upload size: 10 MB
-MAX_FILE_SIZE = int(os.environ.get("MAX_FILE_SIZE_BYTES", 10 * 1024 * 1024))
+_DEFAULT_MAX_FILE_SIZE = 10 * 1024 * 1024
+try:
+    MAX_FILE_SIZE = int(os.environ.get("MAX_FILE_SIZE_BYTES", _DEFAULT_MAX_FILE_SIZE))
+except ValueError:
+    logger.warning(
+        "Invalid MAX_FILE_SIZE_BYTES value; using default %d bytes.",
+        _DEFAULT_MAX_FILE_SIZE,
+    )
+    MAX_FILE_SIZE = _DEFAULT_MAX_FILE_SIZE
 ALLOWED_CONTENT_TYPES = {"image/jpeg", "image/png", "image/webp", "image/bmp"}
 
 app = FastAPI(

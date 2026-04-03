@@ -27,11 +27,11 @@ def predict():
         tensor = preprocess(image)
         preds = run_inference(model, tensor)
         risk = compute_risk(preds)
-    except ValueError as exc:
-        logger.warning("Invalid input: %s", exc)
-        return jsonify({"error": str(exc)}), 422
-    except Exception as exc:
-        logger.exception("Prediction failed: %s", exc)
+    except ValueError:
+        logger.warning("Invalid input received for prediction.")
+        return jsonify({"error": "Invalid input data."}), 422
+    except Exception:
+        logger.exception("Prediction failed.")
         return jsonify({"error": "Internal server error."}), 500
 
     return jsonify({"risk_level": risk})
