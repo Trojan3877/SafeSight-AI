@@ -1,6 +1,6 @@
 # app/main.py
 from flask import Flask
-from app.api.routes import api
+from app.app.routes import api
 
 def create_app():
     app = Flask(__name__)
