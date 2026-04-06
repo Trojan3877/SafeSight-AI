@@ -2,10 +2,10 @@
 import logging
 
 from flask import Blueprint, request, jsonify
-from app.models.loader import load_model
-from app.core.preprocessing import preprocess
-from app.core.inference import run_inference
-from app.core.risk_engine import compute_risk
+from app.app.app.models.loader import load_model
+from app.app.app.core.preprocessing import preprocess
+from app.app.app.core.inference import run_inference
+from app.app.app.core.risk_engine import compute_risk
 
 logger = logging.getLogger(__name__)
 

@@ -1,6 +1,9 @@
 # api/inference.py
+import io
 import logging
 from typing import Any, Dict
+
+from PIL import Image
 
 logger = logging.getLogger(__name__)
 
@@ -20,22 +23,26 @@ def run_inference(image_tensor: Any, model: Any) -> Any:
 
 
 def predict(image_bytes: bytes) -> Dict[str, Any]:
-    """Entry-point for the FastAPI route: accepts raw image bytes and returns a
-    risk prediction dictionary.
+    """Accept raw image bytes and return a risk prediction dictionary.
 
-    This is a stub that should be replaced with a real model pipeline.
-    It currently raises ``NotImplementedError`` so that callers receive a
-    clear 500 error rather than a silent wrong result.
+    Opens and validates the image with Pillow, then returns a default
+    LOW-risk response.  Replace this stub with a real model pipeline
+    when an ML model is available.
 
     Args:
         image_bytes: Raw bytes of the uploaded image file.
 
     Returns:
-        A dict with at least a ``risk_level`` key.
+        A dict containing ``risk_level`` and ``confidence`` keys.
 
     Raises:
-        NotImplementedError: Until a real model is wired up.
+        ValueError: If the image cannot be opened or decoded.
     """
-    raise NotImplementedError(
-        "predict() is not yet implemented. Wire up a real model pipeline."
-    )
+    try:
+        image = Image.open(io.BytesIO(image_bytes))
+        image.verify()
+    except Exception as exc:
+        raise ValueError(f"Invalid image data: {exc}") from exc
+
+    logger.info("Inference stub: returning default LOW risk level.")
+    return {"risk_level": "LOW", "confidence": 0.0}

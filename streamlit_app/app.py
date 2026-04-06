@@ -18,7 +18,7 @@ if file:
     try:
         res = requests.post(
             f"{API_URL}/predict",
-            files={"image": (file.name, file, file.type)},
+            files={"file": (file.name, file, file.type)},
             timeout=REQUEST_TIMEOUT,
         )
         res.raise_for_status()
